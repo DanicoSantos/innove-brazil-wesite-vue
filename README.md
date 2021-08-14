@@ -1,2 +1,19 @@
-# Site Innove Brazil (Innove Brazil website)
-Um site institucional desenvolvido em vuejs (A institutional website built with Vuejs)
+# innove-brazil-wesite-vue
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
