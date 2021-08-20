@@ -56,13 +56,52 @@
       </nav>
     </div>
 
-    <!-- Main content view -->
+    <!-- begin: Main content view -->
     <main>
       <router-view />
     </main>
+    <!-- end: Main content view -->
+    <!-- begin: Footer -->
+    <footer class="footer is-info">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <div class="footer__contact">
+              <address class="footer__address">
+                <strong>Edifício Empresarial Bolonha</strong> <br />
+                Av. José Malcher, 168, sala 110
+              </address>
+              <p class="footer__phone my-4">
+                +55 (91) 98111-1762
+              </p>
+              <p class="footer__email">Bertram.heinze@innovbrazil.com</p>
+            </div>
+          </div>
+          <div class="column">
+            <img src="https://via.placeholder.com/200x80" alt="" />
+          </div>
+          <div class="column">
+            <a href="/"
+              ><span class="icon"><i class="fas fa-instagram"></i></span
+            ></a>
+            <a href="/"
+              ><span class="icon"><i class="fas fa-facebook"></i></span
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end: Footer -->
   </div>
 </template>
 
 <style lang="scss">
 @import "../node_modules/bulma/";
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
 </style>
