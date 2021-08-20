@@ -40,7 +40,8 @@
 
 <style lang="scss" scoped>
 .partners {
-  margin: 15rem auto;
+  margin-top: 15rem;
+  margin-bottom: 5rem;
 }
 </style>
 
