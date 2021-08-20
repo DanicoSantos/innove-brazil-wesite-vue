@@ -84,6 +84,34 @@
       </div>
     </section>
     <!-- end: Highlight section -->
+
+    <!-- begin: Contact section -->
+    <section class="section contact mt-6">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-6">
+            <img src="https://via.placeholder.com/600x470" alt="" />
+          </div>
+          <div class="column p-6">
+            <div class="contact__info">
+              <h4 class="title is-size-4">Contato</h4>
+              <address class="contact__address">
+                <strong>Edifício Empresarial Bolonha</strong> <br />
+                Av. José Malcher, 168, sala 110
+              </address>
+              <p class="contact__phone">
+                +55 (91) 98111-1762
+              </p>
+              <p class="contact__email">Bertram.heinze@innovbrazil.com</p>
+              <p class="contact__working-hours">
+                Segunda a sexta, das 9h às 18h
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end: Contact section -->
   </div>
 </template>
 
@@ -108,5 +136,12 @@ export default {
   justify-content: space-around;
   align-items: flex-start;
   height: 80%;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
 }
 </style>
