@@ -62,7 +62,7 @@
     </main>
     <!-- end: Main content view -->
     <!-- begin: Footer -->
-    <footer class="footer is-info">
+    <footer class="footer has-background-info">
       <div class="container">
         <div class="columns">
           <div class="column">
