@@ -2,7 +2,7 @@
   <div class="home">
     <Carousel />
     <Partners />
-
+    <!-- begin: About section -->
     <section class="section about">
       <div class="container">
         <div class="columns">
@@ -30,6 +30,60 @@
         </div>
       </div>
     </section>
+    <!-- end: About section -->
+
+    <!-- begin: Services section -->
+    <section class="section services">
+      <div class="container">
+        <h2
+          class="title is-size-3 has-text-centered has-text-danger mb-6 services__title"
+        >
+          Serviços
+        </h2>
+        <div class="columns">
+          <div class="column is-4">
+            <div class="services__item has-text-centered">
+              <img src="https://via.placeholder.com/80" alt="" />
+              <p>Representação de vendas</p>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="services__item has-text-centered">
+              <img src="https://via.placeholder.com/80" alt="" />
+              <p>Representação de vendas</p>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="services__item has-text-centered">
+              <img src="https://via.placeholder.com/80" alt="" />
+              <p>Representação de vendas</p>
+            </div>
+          </div>
+        </div>
+        <div class="has-text-centered mt-6">
+          <button class="button is-danger">Saiba mais</button>
+        </div>
+      </div>
+    </section>
+    <!-- end: Services section -->
+
+    <!-- begin: Highlight section -->
+    <section class="highlight mt-6">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-4">
+            <img src="https://via.placeholder.com/400" alt="" />
+          </div>
+          <div class="column is-4">
+            <img src="https://via.placeholder.com/400" alt="" />
+          </div>
+          <div class="column is-4">
+            <img src="https://via.placeholder.com/400" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end: Highlight section -->
   </div>
 </template>
 
