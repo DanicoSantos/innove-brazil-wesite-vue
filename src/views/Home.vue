@@ -14,7 +14,7 @@
               />
             </figure>
           </div>
-          <div class="column is-6">
+          <div class="column is-5">
             <div class="about__content pl-6">
               <h2 class="title is-3 title--special">
                 Especialista no mercado de mineração
@@ -38,27 +38,37 @@
     <!-- begin: Services section -->
     <section class="section services">
       <div class="container">
-        <h2
-          class="title is-size-3 has-text-centered has-text-danger mb-6 services__title"
-        >
-          Serviços
-        </h2>
+        <div class="services__title">
+          <h2
+            class="title title--special is-uppercase is-size-3 has-text-danger mb-6 "
+          >
+            Serviços
+          </h2>
+        </div>
         <div class="columns">
           <div class="column is-4">
             <div class="services__item has-text-centered">
-              <img src="https://via.placeholder.com/80" alt="" />
+              <img
+                src="@/assets/img/icons/holding-hands.svg"
+                width="149"
+                alt=""
+              />
               <p>Representação de vendas</p>
             </div>
           </div>
           <div class="column is-4">
             <div class="services__item has-text-centered">
-              <img src="https://via.placeholder.com/80" alt="" />
-              <p>Representação de vendas</p>
+              <img
+                src="@/assets/img/icons/marketing-charts.svg"
+                width="115"
+                alt=""
+              />
+              <p>Desenvolvimento de mercado</p>
             </div>
           </div>
           <div class="column is-4">
             <div class="services__item has-text-centered">
-              <img src="https://via.placeholder.com/80" alt="" />
+              <img src="@/assets/img/icons/cog-charts.svg" width="123" alt="" />
               <p>Representação de vendas</p>
             </div>
           </div>
@@ -134,6 +144,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/variables.scss";
+
+// About section
 .about__content {
   display: flex;
   flex-direction: column;
@@ -143,12 +155,12 @@ export default {
   color: $primaryColor;
 }
 
-.title,
+.about__content .title,
 .subtitle {
   color: $primaryColor;
 }
 
-.image img {
+.about .image img {
   position: relative;
   z-index: 10009;
 }
@@ -162,6 +174,31 @@ export default {
   width: 100%;
   height: 100%;
   z-index: 10000;
+}
+
+// Services section
+.services .services__title {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.services .title--special::after {
+  border-color: $dangerColor;
+  text-align: center;
+  width: 20%;
+}
+
+.services__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.services .button.is-danger {
+  background-color: $dangerColor;
 }
 
 .contact__info {
