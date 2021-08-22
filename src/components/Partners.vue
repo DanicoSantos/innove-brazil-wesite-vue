@@ -1,5 +1,5 @@
 <template>
-  <div class="partners">
+  <div class="partners section">
     <div class="container">
       <div class="columns">
         <div class="column is-3">

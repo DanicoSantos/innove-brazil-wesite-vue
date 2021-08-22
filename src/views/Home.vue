@@ -81,7 +81,7 @@
     <!-- end: Services section -->
 
     <!-- begin: Highlight section -->
-    <section class="highlight mt-6">
+    <section class=" section highlight mt-6">
       <div class="container">
         <div class="columns">
           <div class="column is-4">
