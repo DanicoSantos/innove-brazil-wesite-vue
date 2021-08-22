@@ -19,9 +19,16 @@
 </template>
 
 <style lang="scss" scoped>
+@import "../assets/scss/variables.scss";
+
 .carousel {
   background: url(../assets/img/banner-home.jpg) no-repeat;
   background-size: cover;
+}
+
+.carousel__hero .title,
+.subtitle {
+  text-shadow: $baseShadow;
 }
 
 .carousel__hero {
