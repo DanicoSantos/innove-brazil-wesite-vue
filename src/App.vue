@@ -97,7 +97,7 @@
 
 <style lang="scss">
 @import "../node_modules/bulma/";
-
+@import "assets/scss/variables.scss";
 .footer__contact {
   display: flex;
   flex-direction: column;
@@ -105,8 +105,21 @@
   height: 100%;
 }
 
-// Bulma reset
+/* 
+* Bulma reset 
+*/
+
+// Navbar
 .navbar-item img {
   max-height: unset;
+}
+
+// Buttons
+.button {
+  border-radius: 0px;
+}
+
+.button.is-info {
+  background-color: $primaryColor;
 }
 </style>

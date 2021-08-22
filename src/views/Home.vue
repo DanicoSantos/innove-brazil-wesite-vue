@@ -8,12 +8,15 @@
         <div class="columns">
           <div class="column is-5">
             <figure class="image about__image">
-              <img src="https://via.placeholder.com/400x500" alt="" />
+              <img
+                src="@/assets/img/img-about.jpg"
+                alt="Maquinaria de mineração"
+              />
             </figure>
           </div>
           <div class="column is-6">
             <div class="about__content pl-6">
-              <h2 class="title is-3">
+              <h2 class="title is-3 title--special">
                 Especialista no mercado de mineração
               </h2>
               <p class="subtitle is-4">
@@ -129,13 +132,36 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../assets/scss/variables.scss";
 .about__content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
   height: 80%;
+  color: $primaryColor;
+}
+
+.title,
+.subtitle {
+  color: $primaryColor;
+}
+
+.image img {
+  position: relative;
+  z-index: 10009;
+}
+
+.about__image::after {
+  content: "";
+  border: 3px solid $primaryColor;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
 }
 
 .contact__info {
@@ -143,5 +169,20 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   height: 90%;
+}
+
+/* Helpers */
+.title--special {
+  position: relative;
+  font-weight: 400;
+}
+
+.title--special::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+  border-bottom: 3px solid $primaryColor;
+  width: 5%;
 }
 </style>
