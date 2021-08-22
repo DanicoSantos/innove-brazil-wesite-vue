@@ -29,9 +29,11 @@
 
       <div class="colums is-centered">
         <div class="column">
-          <router-link to="/parceiros" class="button is-info mt-6"
-            >Parceiros</router-link
-          >
+          <div class="has-text-centered mt-6">
+            <router-link to="/parceiros" class="button is-info mt-6"
+              >Parceiros</router-link
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -42,6 +44,10 @@
 .partners {
   margin-top: 15rem;
   margin-bottom: 5rem;
+}
+
+.partners .image img {
+  width: 185px;
 }
 </style>
 
