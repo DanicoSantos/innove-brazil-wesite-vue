@@ -107,7 +107,7 @@
           </div>
           <div class="column p-6">
             <div class="contact__info">
-              <h4 class="title is-size-4">Contato</h4>
+              <h4 class="title is-size-4 is-uppercase">Contato</h4>
               <address class="contact__address">
                 <strong>Edifício Empresarial Bolonha</strong> <br />
                 Av. José Malcher, 168, sala 110
@@ -199,6 +199,19 @@ export default {
 
 .services .button.is-danger {
   background-color: $dangerColor;
+}
+
+// Contact section
+.contact__info .title,
+.subtitle,
+address,
+strong,
+p {
+  color: $primaryColor;
+}
+
+.contact__info .title {
+  font-weight: 400;
 }
 
 .contact__info {
