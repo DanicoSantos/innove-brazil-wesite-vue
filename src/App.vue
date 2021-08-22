@@ -10,9 +10,9 @@
           <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
               <img
-                src="https://bulma.io/images/bulma-logo.png"
-                width="112"
-                height="28"
+                src="@/assets/img/innovbrazil-logo-pb.png"
+                width="150"
+                height="30"
               />
             </a>
 
@@ -103,5 +103,10 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+}
+
+// Bulma reset
+.navbar-item img {
+  max-height: unset;
 }
 </style>
