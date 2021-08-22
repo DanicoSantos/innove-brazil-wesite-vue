@@ -62,13 +62,16 @@
     </main>
     <!-- end: Main content view -->
     <!-- begin: Footer -->
-    <footer class="footer has-background-info">
+    <footer class="footer">
       <div class="container">
         <div class="columns">
           <div class="column">
             <div class="footer__contact">
               <address class="footer__address">
-                <strong>Edifício Empresarial Bolonha</strong> <br />
+                <strong class="has-text-white"
+                  >Edifício Empresarial Bolonha</strong
+                >
+                <br />
                 Av. José Malcher, 168, sala 110
               </address>
               <p class="footer__phone my-4">
@@ -77,16 +80,31 @@
               <p class="footer__email">Bertram.heinze@innovbrazil.com</p>
             </div>
           </div>
-          <div class="column">
-            <img src="https://via.placeholder.com/200x80" alt="" />
+          <div
+            class="column has-text-centered is-flex is-align-items-center is-justify-content-center"
+          >
+            <figure>
+              <img
+                src="@/assets/img/innovbrazil-logo-pb.png"
+                width="184"
+                height="60"
+                alt=""
+              />
+            </figure>
           </div>
-          <div class="column">
-            <a href="/"
-              ><span class="icon"><i class="fas fa-instagram"></i></span
-            ></a>
-            <a href="/"
-              ><span class="icon"><i class="fas fa-facebook"></i></span
-            ></a>
+          <div
+            class="column is-flex is-align-items-center is-justify-content-flex-end"
+          >
+            <div
+              class="is-flex is-justify-content-center is-align-items-center"
+            >
+              <a href="/">
+                <img src="@/assets/img/icons/instagram.svg" width="31" alt="" />
+              </a>
+              <a href="/" class="mx-4">
+                <img src="@/assets/img/icons/facebook.svg" width="28" alt="" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -98,11 +116,17 @@
 <style lang="scss">
 @import "../node_modules/bulma/";
 @import "assets/scss/variables.scss";
+
+.footer {
+  background-color: $primaryColor;
+}
+
 .footer__contact {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  color: #fff;
 }
 
 /* 
