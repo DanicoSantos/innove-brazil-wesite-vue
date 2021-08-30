@@ -2,7 +2,7 @@
   <div id="app" class="app">
     <div id="nav">
       <nav
-        class="navbar is-dark"
+        class="navbar is-dark is-fixed-top"
         role="navigation"
         aria-label="main navigation"
       >
@@ -134,6 +134,10 @@
 */
 
 // Navbar
+.navbar.is-dark {
+  background-color: transparent;
+}
+
 .navbar-item img {
   max-height: unset;
 }
