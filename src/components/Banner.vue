@@ -6,7 +6,7 @@
           <div class="columns">
             <div class="column is-7">
               <h1 class="title is-size-1 mb-6 has-text-white">
-                A vitrine para soluções e tecnologias inovadoras em mineração
+                {{ title }}
               </h1>
             </div>
           </div>
@@ -38,10 +38,12 @@
 <script>
 export default {
   name: "banner",
+  props: {
+    title: String,
+  },
   data() {
     return {
       heroSize: "",
-      backGroundImage: "",
     };
   },
 };

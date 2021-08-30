@@ -1,7 +1,9 @@
 <template>
   <div class="about">
     <div class="banner__background-image">
-      <Banner />
+      <Banner
+        title="A vitrine para soluções e tecnologias inovadoras em mineração"
+      />
     </div>
     <!-- begin:About Innov Brazil text -->
     <section class="section mt-6">
