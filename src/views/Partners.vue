@@ -105,7 +105,15 @@ export default {
   methods: {
     changeNavbarModifier() {
       const navbar = document.getElementById("nav");
-      console.log(navbar);
+      const navbarBrandImages = navbar.querySelectorAll(".navbar-brand img");
+      console.log();
+      navbar.querySelector('.navbar').classList.remove('is-dark')
+
+      for (const image of navbarBrandImages) {
+        image.classList.toggle('is-hidden');
+      }
+      
+      
     },
   },
   mounted() {

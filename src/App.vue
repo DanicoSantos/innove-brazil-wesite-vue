@@ -13,6 +13,13 @@
                 src="@/assets/img/innovbrazil-logo-pb.png"
                 width="150"
                 height="30"
+                class=""
+              />
+              <img
+                class="is-hidden"
+                src="@/assets/img/innovbrazil-logo.png"
+                width="150"
+                height="30"
               />
             </a>
 
@@ -43,9 +50,9 @@
                 Serviços
               </router-link>
 
-              <a to="/partners" class="navbar-item">
+              <router-link to="/partners" class="navbar-item">
                 Parceiros
-              </a>
+              </router-link>
 
               <a href="#contact" class="navbar-item">
                 Contato
