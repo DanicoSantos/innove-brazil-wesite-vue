@@ -20,7 +20,7 @@
 @import "../assets/scss/variables.scss";
 
 .banner {
-  background: url(../assets/img/banner-about.jpg) no-repeat right bottom;
+  background: no-repeat right bottom;
   background-size: cover;
 }
 
@@ -41,6 +41,7 @@ export default {
   data() {
     return {
       heroSize: "",
+      backGroundImage: "",
     };
   },
 };

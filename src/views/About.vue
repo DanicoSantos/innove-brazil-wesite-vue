@@ -1,7 +1,8 @@
 <template>
   <div class="about">
-    <Banner />
-
+    <div class="banner__background-image">
+      <Banner />
+    </div>
     <!-- begin:About Innov Brazil text -->
     <section class="section mt-6">
       <div class="container">
@@ -89,18 +90,18 @@
     <!-- end: About Innov Brazil text part ii -->
 
     <!-- begin: Divider -->
-    <div class="section">
+    <div class="section py-0">
       <div class="container">
         <div class="columns">
           <div class="column is-1 is-offset-6">
-            <div class="custom-divider"></div>
+            <div class="custom-divider mb-0"></div>
           </div>
         </div>
       </div>
     </div>
     <!-- end: Divider -->]
     <!-- begin: Languages -->
-    <section class="section">
+    <section class="section pt-0">
       <div class="container">
         <div class="columns">
           <div class="column is-8 is-offset-2 has-text-centered">
@@ -108,7 +109,7 @@
               Oferecemos serviços em inglês, português e alemão.
             </p>
             <div
-              class="has-text-centered my-6 is-flex is-align-items-center is-justify-content-center"
+              class="has-text-centered mb-6 is-flex is-align-items-center is-justify-content-center"
             >
               <span>
                 <img
@@ -116,7 +117,7 @@
                   alt=""
                 />
               </span>
-              <span class="px-4">
+              <span class="px-6">
                 <img src="@/assets/img/icons/flag-for-brazil.svg" alt="" />
               </span>
               <span>
@@ -145,6 +146,10 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/variables.scss";
 @import "../../node_modules/bulma-divider";
+
+.banner__background-image {
+  background-image: url("../assets/img/banner-about.jpg");
+}
 
 .about__content {
   display: flex;
