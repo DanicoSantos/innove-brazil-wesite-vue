@@ -1,17 +1,13 @@
 <template>
   <div class="banner">
-    <section class="hero banner__hero is-halfheight">
+    <section class="hero banner__hero is-fullheight">
       <div class="hero-body">
         <div class="container">
           <div class="columns">
             <div class="column is-7">
               <h1 class="title is-size-1 mb-6 has-text-white">
-                Somos especialistas no mercado de mineração
+                A vitrine para soluções e tecnologias inovadoras em mineração
               </h1>
-              <p class="subtitle has-text-white">
-                A InnovBrazil desenvolveu conhecimento especializado do mercado
-                de mineração do Norte do Brasil
-              </p>
             </div>
           </div>
         </div>
@@ -24,7 +20,7 @@
 @import "../assets/scss/variables.scss";
 
 .banner {
-  background: url(../assets/img/banner-home.jpg) no-repeat;
+  background: url(../assets/img/banner-about.jpg) no-repeat right bottom;
   background-size: cover;
 }
 

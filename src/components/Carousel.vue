@@ -1,6 +1,6 @@
 <template>
   <div class="carousel">
-    <section class="hero carousel__hero is-fullheight-with-navbar">
+    <section class="hero carousel__hero is-fullheight">
       <div class="hero-body">
         <div class="columns">
           <div class="column is-7">

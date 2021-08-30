@@ -1,31 +1,58 @@
 <template>
   <div class="about">
     <Banner />
+
+    <!-- begin:About Innov Brazil text -->
+    <section class="section mt-6">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8 is-offset-2">
+            <p>
+              A InnovBrazil é uma empresa de consultoria sediada em Belém
+              fundada em maio de 2016 pelo Dr. Bertram Heinze, geólogo com mais
+              de 15 anos de experiência na área de Transferência Internacional
+              de Tecnologia e Gestão de Relações Externas para os setores
+              público e privado na Alemanha, Rússia e Brasil.A InnovBrazil
+              desenvolveu conhecimento especializado do mercado de mineração do
+              Norte do Brasil e estabeleceu uma ampla rede com empresas de
+              mineração e logística mineral ativas na região.
+            </p>
+            <p class="title is-size-3 has-text-centered my-6">
+              “Somos uma empresa familiar.”
+            </p>
+            <p>
+              A InnovBrazil busca se tornar a referência número um em soluções
+              inovadoras para a indústria de mineração no Norte do Brasil. Nosso
+              foco está no Estado do Pará, onde grandes investimentos em novos
+              projetos de mineração estão acontecendo agora. O Pará combina um
+              vasto território com as infra-estruturas existentes - estradas,
+              portos, ferrovias, linhas de transmissão e centros populacionais.
+              A InnovBrazil desenvolve esse mercado para você!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end:About Innov Brazil text -->
+
     <section class="section">
       <div class="container">
         <div class="columns">
-          <div class="column is-5">
+          <div class="column is-4 is-offset-1">
             <figure class="image about__image">
               <img
-                src="@/assets/img/img-about.jpg"
+                src="https://via.placeholder.com/400x600"
                 alt="Maquinaria de mineração"
               />
             </figure>
           </div>
-          <div class="column is-5">
+          <div class="column is-6">
             <div class="about__content pl-6">
-              <h2 class="title is-3 title--special">
-                Especialista no mercado de mineração
-              </h2>
-              <p class="subtitle is-4">
-                A InnovBrazil é uma empresa de consultoria sediada em Belém
+              <p class="title is-size-2 has-text-weight-normal">
+                Bertram Heinze (Ph.D.), alemão, geólogo por formação, com 15
+                anos de experiência em relações externas para o setor público de
+                pesquisa e a indústria de mineração privada.
               </p>
-              <p class="about__text">
-                A InnovBrazil desenvolveu conhecimento especializado do mercado
-                de mineração do Norte do Brasil e estabeleceu uma ampla rede com
-                empresas de mineração e logística mineral ativas na região.
-              </p>
-              <button class="button is-info">Conheça</button>
             </div>
           </div>
         </div>
