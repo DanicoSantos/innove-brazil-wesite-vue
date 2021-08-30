@@ -104,7 +104,7 @@
 <script>
 import Banner from "../components/Banner.vue";
 export default {
-  name: "services",
+  name: "Services",
   components: {
     Banner,
   },
