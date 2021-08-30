@@ -114,8 +114,8 @@
 </template>
 
 <style lang="scss">
-@import "../node_modules/bulma/";
 @import "assets/scss/variables.scss";
+@import "../node_modules/bulma/";
 
 .footer {
   background-color: $primaryColor;

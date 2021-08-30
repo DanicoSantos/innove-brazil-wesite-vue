@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <section class="hero banner__hero is-fullheight">
+    <section class="hero banner__hero is-halfheight">
       <div class="hero-body">
         <div class="container">
           <div class="columns">

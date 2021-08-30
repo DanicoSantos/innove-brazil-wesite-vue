@@ -35,6 +35,7 @@
     </section>
     <!-- end:About Innov Brazil text -->
 
+    <!-- begin: Media section -->
     <section class="section">
       <div class="container">
         <div class="columns">
@@ -58,6 +59,76 @@
         </div>
       </div>
     </section>
+    <!-- end: Media section -->
+
+    <!-- begin: About Innov Brazil text part ii -->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8 is-offset-2">
+            <p>
+              Criou e atuou como diretor do Helmholtz Office Moscow e da Casa
+              Alemã de Ciência e Inovação, São Paulo (@AHK São Paulo); De 2011 a
+              2016 constituiu e chefiou o Departamento de Relações Externas e
+              Projetos de Pesquisa do Instituto Tecnológico Vale em Belém, Pará,
+              Brasil.
+            </p>
+            <p class="mt-6">
+              Em 2016 Bertram fundou a InnovBrazil com foco no desenvolvimento
+              de novas oportunidades de negócios para empresas europeias no
+              Norte do Brasil, o pólo de mineração de mais rápido crescimento na
+              América Latina, com grandes reservas em Fe, Al, Cu, Ni, Mn, P
+              ;&amp; Au; expansão rápida das instalações portuárias para
+              exportação de minerais e grãos e importação de fertilizantes,
+              carvão de coque e clinquer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end: About Innov Brazil text part ii -->
+
+    <!-- begin: Divider -->
+    <div class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-1 is-offset-6">
+            <div class="custom-divider"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end: Divider -->]
+    <!-- begin: Languages -->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8 is-offset-2 has-text-centered">
+            <p class="title is-size-4 has-text-weight-normal">
+              Oferecemos serviços em inglês, português e alemão.
+            </p>
+            <div
+              class="has-text-centered my-6 is-flex is-align-items-center is-justify-content-center"
+            >
+              <span>
+                <img
+                  src="@/assets/img/icons/flag-for-united-states.svg"
+                  alt=""
+                />
+              </span>
+              <span class="px-4">
+                <img src="@/assets/img/icons/flag-for-brazil.svg" alt="" />
+              </span>
+              <span>
+                <img src="@/assets/img/icons/flag-for-germany.svg" alt="" />
+              </span>
+            </div>
+            <button class="button is-info">Conheça</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end: Languages -->
   </div>
 </template>
 
@@ -73,6 +144,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/variables.scss";
+@import "../../node_modules/bulma-divider";
 
 .about__content {
   display: flex;
@@ -102,5 +174,14 @@ export default {
   width: 100%;
   height: 100%;
   z-index: 10000;
+}
+.custom-divider {
+  display: block;
+  position: relative;
+  border-top: $divider-thickness solid $divider-color;
+  height: 0.1rem;
+  margin: 2rem 0;
+  text-align: center;
+  width: 80%;
 }
 </style>
