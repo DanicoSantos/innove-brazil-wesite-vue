@@ -8,7 +8,7 @@
       >
         <div class="container">
           <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
+            <a class="navbar-item" href="/">
               <img
                 src="@/assets/img/innovbrazil-logo-pb.png"
                 width="150"
@@ -31,23 +31,23 @@
 
           <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
-              <a class="navbar-item">
+              <router-link to="/" class="navbar-item">
                 Home
-              </a>
+              </router-link>
 
-              <a class="navbar-item">
+              <router-link to="/about" class="navbar-item">
                 Sobre
-              </a>
+              </router-link>
 
-              <a class="navbar-item">
-                Serviço
-              </a>
+              <router-link to="/services" class="navbar-item">
+                Serviços
+              </router-link>
 
-              <a class="navbar-item">
+              <a to="/partners" class="navbar-item">
                 Parceiros
               </a>
 
-              <a class="navbar-item">
+              <a href="#contact" class="navbar-item">
                 Contato
               </a>
             </div>
