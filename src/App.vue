@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="app">
+  <div id="app" class="app" v-on:scroll="changeNavbarOnScroll">
     <div id="nav">
       <nav
         class="navbar is-dark is-fixed-top"
@@ -143,6 +143,10 @@
 // Navbar
 .navbar.is-dark {
   background-color: transparent;
+}
+
+.navbar {
+  transition: 0.5s ease;
 }
 
 .navbar-item img {

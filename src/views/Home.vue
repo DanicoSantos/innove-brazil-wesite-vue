@@ -40,7 +40,12 @@
       <div class="container">
         <div class="services__title">
           <h2
-            class="title title--special is-uppercase is-size-3 has-text-danger mb-6 "
+            class="
+              title title--special
+              is-uppercase is-size-3
+              has-text-danger
+              mb-6
+            "
           >
             Serviços
           </h2>
@@ -81,7 +86,7 @@
     <!-- end: Services section -->
 
     <!-- begin: Highlight section -->
-    <section class=" section highlight mt-6">
+    <section class="section highlight mt-6">
       <div class="container">
         <div class="columns">
           <div class="column is-4">
@@ -112,9 +117,7 @@
                 <strong>Edifício Empresarial Bolonha</strong> <br />
                 Av. José Malcher, 168, sala 110
               </address>
-              <p class="contact__phone">
-                +55 (91) 98111-1762
-              </p>
+              <p class="contact__phone">+55 (91) 98111-1762</p>
               <p class="contact__email">Bertram.heinze@innovbrazil.com</p>
               <p class="contact__working-hours">
                 Segunda a sexta, das 9h às 18h
@@ -138,6 +141,39 @@ export default {
   components: {
     Carousel,
     Partners,
+  },
+  methods: {
+    changeNavbarOnScroll() {
+      const navbar = document.getElementById("nav");
+      const navbarBrandImages = navbar.querySelectorAll(".navbar-brand img");
+
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        navbar.querySelector(".navbar").classList.remove("is-dark");
+
+        if (
+          document.body.scrollTop < 21 ||
+          document.documentElement.scrollTop < 21
+        ) {
+          for (const image of navbarBrandImages) {
+            image.classList.toggle("is-hidden");
+          }
+        }
+      } else {
+        navbar.querySelector(".navbar").classList.add("is-dark");
+
+        for (const image of navbarBrandImages) {
+          image.classList.toggle("is-hidden");
+        }
+      }
+    },
+  },
+  created() {
+    window.onscroll = () => {
+      this.changeNavbarOnScroll();
+    };
   },
 };
 </script>

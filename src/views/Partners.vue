@@ -106,14 +106,11 @@ export default {
     changeNavbarModifier() {
       const navbar = document.getElementById("nav");
       const navbarBrandImages = navbar.querySelectorAll(".navbar-brand img");
-      console.log();
       navbar.querySelector('.navbar').classList.remove('is-dark')
 
       for (const image of navbarBrandImages) {
         image.classList.toggle('is-hidden');
-      }
-      
-      
+      }     
     },
   },
   mounted() {
