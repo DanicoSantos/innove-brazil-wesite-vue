@@ -9,14 +9,16 @@
         <div class="container">
           <div class="navbar-brand">
             <a class="navbar-item" href="/">
+              
               <img
+              class="is-pb"
                 src="@/assets/img/innovbrazil-logo-pb.png"
                 width="150"
                 height="30"
-                class=""
               />
+
               <img
-                class="is-hidden"
+                class="is-colored"
                 src="@/assets/img/innovbrazil-logo.png"
                 width="150"
                 height="30"
@@ -145,8 +147,28 @@
   background-color: transparent;
 }
 
+.navbar.is-dark .navbar-brand .is-pb {
+  display: inline-block;
+}
+
+.navbar.is-dark .navbar-brand .is-colored {
+  display: none;
+}
+
 .navbar {
   transition: 0.5s ease;
+}
+
+.navbar.is-fixed-top {
+  z-index: 100010;
+}
+
+.navbar .navbar-brand .is-pb {
+  display: none;
+}
+
+.navbar .navbar-brand .is-colored {
+  display: inline-block;
 }
 
 .navbar-item img {

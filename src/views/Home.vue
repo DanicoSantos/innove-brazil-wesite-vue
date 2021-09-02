@@ -153,24 +153,15 @@ export default {
       ) {
         navbar.querySelector(".navbar").classList.remove("is-dark");
 
-        if (
-          document.body.scrollTop < 21 ||
-          document.documentElement.scrollTop < 21
-        ) {
-          for (const image of navbarBrandImages) {
-            image.classList.toggle("is-hidden");
-          }
-        }
+        
       } else {
         navbar.querySelector(".navbar").classList.add("is-dark");
 
-        for (const image of navbarBrandImages) {
-          image.classList.toggle("is-hidden");
-        }
       }
     },
   },
   created() {
+    
     window.onscroll = () => {
       this.changeNavbarOnScroll();
     };
