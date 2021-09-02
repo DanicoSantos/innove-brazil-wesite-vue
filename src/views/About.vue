@@ -111,7 +111,11 @@
               Oferecemos serviços em inglês, português e alemão.
             </p>
             <div
-              class="has-text-centered mb-6 is-flex is-align-items-center is-justify-content-center"
+              class="
+                has-text-centered
+                mb-6
+                is-flex is-align-items-center is-justify-content-center
+              "
             >
               <span>
                 <img
@@ -141,6 +145,30 @@ export default {
   name: "About",
   components: {
     Banner,
+  },
+  methods: {
+    changeNavbarOnScroll() {
+      const navbar = document.getElementById("nav");
+
+      if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+      ) {
+        navbar.querySelector(".navbar").classList.remove("is-dark");
+      } else {
+        navbar.querySelector(".navbar").classList.add("is-dark");
+      }
+    },
+  },
+  created() {
+    window.onscroll = () => {
+      this.changeNavbarOnScroll();
+    };
+
+    document.querySelector(".navbar").classList.add("is-dark");
+  },
+  beforeUnmount() {
+    window.onscroll = () => null;
   },
 };
 </script>

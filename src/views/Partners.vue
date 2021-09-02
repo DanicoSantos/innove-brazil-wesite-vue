@@ -105,17 +105,16 @@ export default {
   methods: {
     changeNavbarModifier() {
       const navbar = document.getElementById("nav");
-      const navbarBrandImages = navbar.querySelectorAll(".navbar-brand img");
       navbar.querySelector('.navbar').classList.remove('is-dark')
-
-      for (const image of navbarBrandImages) {
-        image.classList.toggle('is-hidden');
-      }     
+   
     },
   },
   mounted() {
     this.changeNavbarModifier();
   },
+   beforeMount() {
+    window.onscroll = () => null
+  }
 };
 </script>
 

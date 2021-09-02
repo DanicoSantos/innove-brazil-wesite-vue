@@ -30,7 +30,7 @@
       <div class="colums is-centered">
         <div class="column">
           <div class="has-text-centered mt-6">
-            <router-link to="/parceiros" class="button is-info mt-6"
+            <router-link to="/partners" class="button is-info mt-6"
               >Parceiros</router-link
             >
           </div>
