@@ -1,20 +1,26 @@
 <template>
   <div class="carousel">
     <section class="hero carousel__hero is-fullheight">
-      <img :src="currentImage" style="height: 100%" alt="Some image" />
-      <div class="actions">
-        <span @click="prevImage" class="prev">
-          <i class="fas fa-chevron-left"></i>
-        </span>
-        <span @click="nextImage" class="next">
-          <i class="fas fa-chevron-right"></i>
-        </span>
+      <div class="overlay overlay--filter-black"></div>
+      <div class="carousel-container">
+        <figure :class="{ fade: hasChange }">
+          <img :src="currentImage" style="height: 100%" alt="Some image" />
+        </figure>
+      </div>
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-7">
+              <h1 class="title is-size-2">{{ currentImageTitle }}</h1>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="dots">
         <div
           v-for="(image, index) in images"
           :key="image.id"
-          :class="['thumbnail-image', activeImage == index ? 'active' : '']"
+          :class="[activeImage == index ? 'active' : '']"
           @click="activateImage(index)"
         >
           <span class="dot"></span>
@@ -32,6 +38,18 @@
   position: relative;
 }
 
+.carousel-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+}
+
+.carousel-container figure {
+  width: 100%;
+  height: 100%;
+}
+
 .carousel__hero .title,
 .subtitle {
   text-shadow: $baseShadow;
@@ -40,6 +58,16 @@
 .carousel__hero {
   background: rgba($color: #000, $alpha: 0.4);
   height: 645px;
+}
+
+.hero-body {
+  position: relative;
+  z-index: 9999;
+}
+
+.hero-body .title,
+.subtitle {
+  color: #fff;
 }
 
 /* Next & previous buttons */
@@ -80,36 +108,56 @@
   transition: background-color 0.6s ease;
 }
 
-.active .dot, .dot:hover {
+.active .dot,
+.dot:hover {
   background-color: #fff;
 }
 
 .dots {
   position: absolute;
-  right: 5rem;
+  right: 10rem;
   top: 50%;
   padding: 3rem;
-  background: rgba($color: #fff, $alpha: 0.20);
+  background: rgba($color: #fff, $alpha: 0.4);
   border-radius: 0.5rem;
-  z-index: 10001;
+  z-index: 10000;
 }
 
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 3s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+}
+
+.overlay--filter-black {
+  background: rgba($color: #000, $alpha: 0.4);
 }
 </style>
 
@@ -119,14 +167,19 @@ export default {
   data() {
     return {
       heroSize: "",
+      hasChange: false,
       images: [
         {
           id: 1,
           src: "/img/banner-home.jpg",
+          title: "Title 1",
+          subtitle: "Subtitle 1",
         },
         {
           id: 2,
           src: "/img/banner-about.jpg",
+          title: "Title 2",
+          subtitle: "Subtitle 2",
         },
       ],
       activeImage: 0,
@@ -139,6 +192,11 @@ export default {
     currentImage() {
       return this.images[this.activeImage].src;
     },
+
+    currentImageTitle() {
+      return this.images[this.activeImage].title;
+    },
+
   },
   methods: {
     // Go forward on the images array
@@ -158,10 +216,12 @@ export default {
         active = this.images.length - 1;
       }
       this.activateImage(active);
+      this.hasChange = false;
     },
     activateImage(imageIndex) {
       this.activeImage = imageIndex;
-    },
+      this.hasChange = this.hasChange ? false : true;
+    },    
   },
 };
 </script>
