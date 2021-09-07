@@ -4,7 +4,7 @@
       <div class="overlay overlay--filter-black"></div>
       <div class="carousel-container">
         <figure :class="{ fade: hasChange }">
-          <img :src="currentImage" style="height: 100%" alt="Some image" />
+          <img @load="onImageLoad" :src="currentImage" style="height: 100%" alt="Some image" />
         </figure>
       </div>
       <div class="hero-body">
@@ -126,9 +126,9 @@
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 3s;
+  -webkit-animation-duration: 4s;
   animation-name: fade;
-  animation-duration: 2s;
+  animation-duration: 4s;
 }
 
 @-webkit-keyframes fade {
@@ -220,8 +220,12 @@ export default {
     },
     activateImage(imageIndex) {
       this.activeImage = imageIndex;
-      this.hasChange = this.hasChange ? false : true;
+      this.hasChange = this.hasChange ? false : true;      
     },    
+
+    onImageLoad() {
+      this.hasChange = this.hasChange ? false : true;
+    }
   },
 };
 </script>
