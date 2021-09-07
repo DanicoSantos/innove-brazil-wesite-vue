@@ -156,7 +156,7 @@
 }
 
 .navbar {
-  transition: 0.5s ease;
+  transition: 1s ease;
 }
 
 .navbar.is-fixed-top {
