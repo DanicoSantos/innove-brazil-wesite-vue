@@ -1,30 +1,27 @@
 <template>
   <div class="carousel">
     <section class="hero carousel__hero is-fullheight">
-      <div id="carousel" class="hero-carousel">
-        <div class="item-1">
-          <img src="https://via.placeholder.com/1920x720" alt="" />
-        </div>
-        <div class="item-2">
-          <!-- Slide Content -->
-          <img src="https://via.placeholder.com/1920x720" alt="" />
-        </div>
-        <div class="item-3">
-          <!-- Slide Content -->
-          <img src="https://via.placeholder.com/1920x720" alt="" />
-        </div>
+      <img
+        :src="currentImage"
+        style="height: 100%"
+        alt="Some image"
+      />
+      <div class="actions">
+        <span @click="prevImage" class="prev">
+          <i class="fas fa-chevron-left"></i>
+        </span>
+        <span @click="nextImage" class="next">
+          <i class="fas fa-chevron-right"></i>
+        </span>
       </div>
-      <div class="hero-body">
-        <div class="columns">
-          <div class="column is-7">
-            <h1 class="title is-size-1 mb-6 has-text-white">
-              Somos especialistas no mercado de mineração
-            </h1>
-            <p class="subtitle has-text-white">
-              A InnovBrazil desenvolveu conhecimento especializado do mercado de
-              mineração do Norte do Brasil
-            </p>
-          </div>
+      <div class="dots">
+        <div
+          v-for="(image, index) in images"
+          :key="image.id"
+          :class="['thumbnail-image', activeImage == index ? 'active' : '']"
+          @click="activateImage(index)"
+        >
+          <span class="dot"></span>
         </div>
       </div>
     </section>
@@ -33,12 +30,10 @@
 
 <style lang="scss" scoped>
 @import "../assets/scss/variables.scss";
-@import "../../node_modules/bulma-carousel";
-
 
 .carousel {
-  background: url(../assets/img/banner-home.jpg) no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .carousel__hero .title,
@@ -50,28 +45,54 @@
   background: rgba($color: #000, $alpha: 0.4);
   height: 645px;
 }
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  color: #fff;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 </style>
 
 <script>
-import bulmaCarousel from 'bulma-carousel'
-
 export default {
   name: "Carousel",
   data() {
     return {
       heroSize: "",
+      items: [],
     };
   },
-  methods: {
-    attachCarousel() {
-      bulmaCarousel.attach('#carousel', {
-				slidesToScroll: 1,
-				slidesToShow: 4
-			});
-    }
-  },
-  created() {
-    this.attachCarousel();
-  }
 };
 </script>
