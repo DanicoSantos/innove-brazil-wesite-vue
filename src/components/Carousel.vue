@@ -1,6 +1,19 @@
 <template>
   <div class="carousel">
     <section class="hero carousel__hero is-fullheight">
+      <div id="carousel" class="hero-carousel">
+        <div class="item-1">
+          <img src="https://via.placeholder.com/1920x720" alt="" />
+        </div>
+        <div class="item-2">
+          <!-- Slide Content -->
+          <img src="https://via.placeholder.com/1920x720" alt="" />
+        </div>
+        <div class="item-3">
+          <!-- Slide Content -->
+          <img src="https://via.placeholder.com/1920x720" alt="" />
+        </div>
+      </div>
       <div class="hero-body">
         <div class="columns">
           <div class="column is-7">
@@ -20,6 +33,8 @@
 
 <style lang="scss" scoped>
 @import "../assets/scss/variables.scss";
+@import "../../node_modules/bulma-carousel";
+
 
 .carousel {
   background: url(../assets/img/banner-home.jpg) no-repeat;
@@ -38,6 +53,8 @@
 </style>
 
 <script>
+import bulmaCarousel from 'bulma-carousel'
+
 export default {
   name: "Carousel",
   data() {
@@ -45,5 +62,16 @@ export default {
       heroSize: "",
     };
   },
+  methods: {
+    attachCarousel() {
+      bulmaCarousel.attach('#carousel', {
+				slidesToScroll: 1,
+				slidesToShow: 4
+			});
+    }
+  },
+  created() {
+    this.attachCarousel();
+  }
 };
 </script>
